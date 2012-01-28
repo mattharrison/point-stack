@@ -1,7 +1,10 @@
-;; -- POINT STACK -----------------------------------------------------------------------
-;; matt harrison (matthewharrison@gmail.com)
-;; dmitry gutov  (dgutov@yandex.ru)
-;;
+;;; point-stack.el --- A forward/back stack for point
+
+;; Author: Matt Harrison <matthewharrison@gmail.com>
+;;	Dmitry Gutov <dgutov@yandex.ru>
+
+;;; Commentary:
+
 ;; Provides forward/back stack for point.  I use load it like so:
 ;;
 ;; (add-to-list 'load-path "/home/matt/work/emacs/point-stack")
@@ -16,6 +19,8 @@
 ;;
 ;; based on http://www.emacswiki.org/emacs/JohnConnors
 ;; enhanced with forward-stack
+
+;;; Code:
 
 (defvar point-stack-stack nil)
 ;; after you pop put it on the forward stack
