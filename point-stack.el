@@ -64,3 +64,5 @@
   (goto-char (cadr loc)))
 
 (provide 'point-stack)
+
+;;; point-stack.el ends here
