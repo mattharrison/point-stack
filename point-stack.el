@@ -26,6 +26,7 @@
 ;; after you pop put it on the forward stack
 (defvar point-stack-forward-stack nil)
 
+;;;###autoload
 (defun point-stack-push ()
   "Push current buffer, point, and scroll position onto stack."
   (interactive)
@@ -33,6 +34,7 @@
   (setq point-stack-forward-stack nil) ; new step resets forward history
   (message "Location marked."))
 
+;;;###autoload
 (defun point-stack-pop ()
   "Push current location onto forward stack, move to previous location."
   (interactive)
@@ -42,6 +44,7 @@
     (point-stack-go (car point-stack-stack))
     (setq point-stack-stack (cdr point-stack-stack))))
 
+;;;###autoload
 (defun point-stack-forward-stack-pop ()
   "Push current location onto stack, pop and move to location from forward stack."
   (interactive)
